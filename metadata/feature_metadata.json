@@ -5,5 +5,6 @@
   "data_type": "<data_type: integer, float, categorical, etc.>",
   "units": "<units if applicable>",
   "source": "<origin of the feature, e.g., sensor, user input>",
-  "creation_timestamp": "<ISO_8601_timestamp>"
+  "creation_timestamp": "<ISO_8601_timestamp>",
+  "is_deleted": false
 }
