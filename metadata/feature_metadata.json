@@ -1,0 +1,9 @@
+{
+  "feature_id": "<unique_feature_id>",
+  "feature_name": "<human_readable_name>",
+  "description": "A brief explanation of what the feature represents.",
+  "data_type": "<data_type: integer, float, categorical, etc.>",
+  "units": "<units if applicable>",
+  "source": "<origin of the feature, e.g., sensor, user input>",
+  "creation_timestamp": "<ISO_8601_timestamp>"
+}
