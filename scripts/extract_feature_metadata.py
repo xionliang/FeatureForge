@@ -14,7 +14,8 @@ def extract_feature_metadata(file_path):
         "data_type": metadata.get("data_type"),
         "units": metadata.get("units"),
         "source": metadata.get("source"),
-        "creation_timestamp": metadata.get("creation_timestamp")
+        "creation_timestamp": metadata.get("creation_timestamp"),
+        "is_deleted": metadata.get("is_deleted")
     }
     return feature_info
 
