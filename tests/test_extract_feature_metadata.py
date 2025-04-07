@@ -4,6 +4,7 @@ import tempfile
 import unittest
 from scripts.extract_feature_metadata import extract_feature_metadata
 
+
 class TestExtractFeatureMetadata(unittest.TestCase):
     
     def write_temp_metadata(self, data):
@@ -22,7 +23,7 @@ class TestExtractFeatureMetadata(unittest.TestCase):
             "units": "meters",
             "source": "sensor",
             "creation_timestamp": "2025-04-07T20:00:00Z",
-            "is_deleted": false
+            "is_deleted": False
         }
         tmp_path = self.write_temp_metadata(metadata)
         result = extract_feature_metadata(tmp_path)
@@ -65,7 +66,7 @@ class TestExtractFeatureMetadata(unittest.TestCase):
             "units": "cm",
             "source": "calculation",
             "creation_timestamp": "2025-04-07T21:00:00Z",
-            "is_deleted": true,
+            "is_deleted": True,
             "extra_field": "extra_value"
         }
         tmp_path = self.write_temp_metadata(metadata)
@@ -88,6 +89,7 @@ class TestExtractFeatureMetadata(unittest.TestCase):
         with self.assertRaises(json.JSONDecodeError):
             extract_feature_metadata(tmp_path)
         os.remove(tmp_path)
+
 
 if __name__ == "__main__":
     unittest.main()
